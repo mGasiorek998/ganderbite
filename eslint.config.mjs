@@ -12,11 +12,7 @@ export default tseslint.config(
   ...eslintPluginAstro.configs['flat/recommended'],
   ...compat.config({
     plugins: ['jsx-a11y', 'import'],
-    extends: [
-      'plugin:tailwindcss/recommended',
-      'plugin:jsx-a11y/recommended',
-      'plugin:import/recommended',
-    ],
+    extends: ['plugin:tailwindcss/recommended', 'plugin:jsx-a11y/recommended', 'plugin:import/recommended'],
     rules: {
       'tailwindcss/no-custom-classname': 'off',
       'tailwindcss/migration-from-tailwind-2': 'off',
@@ -25,16 +21,7 @@ export default tseslint.config(
       'import/order': [
         'error',
         {
-          groups: [
-            'index',
-            'sibling',
-            'parent',
-            'internal',
-            'external',
-            'builtin',
-            'object',
-            'type',
-          ],
+          groups: ['index', 'sibling', 'parent', 'internal', 'external', 'builtin', 'object', 'type'],
         },
       ],
     },
