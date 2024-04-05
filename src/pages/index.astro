@@ -1,10 +1,60 @@
 ---
-import { Typography } from '@/lib/ui';
+import { Typography, Skill } from '@/lib/ui';
+import MainLayout from '@/layouts/MainLayout.astro';
+import { Experience } from '@/lib/ui/Experience';
+import { skills, experiences } from '@/content/';
 ---
 
-<div
-  class="flex min-h-screen w-screen flex-col items-center justify-center bg-[#121212] font-ibm text-2xl text-neutral-50"
->
-  <Typography tag="h1" className="text-2xl"> Hello World. </Typography>
-  <Typography tag="h2" font="anton" className="font-anton"> anton test </Typography>
-</div>
+<MainLayout>
+  <section class="relative h-svh w-full">
+    <Typography tag="span" font="anton" size="2xl" className="select-none">
+      GANDER<Typography tag="span" font="anton" size="2xl" className="text-orange-400"
+        >BITE</Typography
+      >
+    </Typography>
+    <Typography tag="h1" className="pt-3.5 md:absolute md:bottom-0 md:pt-0 ">
+      <Typography tag="span" className="text-orange-400">One-Man</Typography> Army web developer based
+      in Poland.<br />Specializing in crafting pixel-perfect, <Typography
+        tag="span"
+        className="text-orange-400"
+      >
+        seamless</Typography
+      ><br />
+      user experiences tailored to your brand's <Typography tag="span" className="text-orange-400"
+        >identity</Typography
+      >.
+    </Typography>
+  </section>
+  <section class="grid grid-cols-1 gap-x-[5vw] py-20 md:grid-cols-2 md:py-44">
+    <ul class="left-0 top-0 flex h-min flex-col gap-y-[5vw] md:sticky md:top-10">
+      {Object.entries(skills).map(([title, skills]) => <Skill title={title} skills={skills} />)}
+    </ul>
+    <ul class="no-scrollbar flex flex-col gap-y-[10vw] pb-0 pt-20 md:gap-y-[80vh] md:py-0">
+      {
+        experiences.map(({ from, to, companyName, position, special = false }) => (
+          <Experience
+            from={from}
+            to={to}
+            companyName={companyName}
+            position={position}
+            special={special}
+          />
+        ))
+      }
+    </ul>
+  </section>
+
+  <section></section>
+</MainLayout>
+
+<style>
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+</style>

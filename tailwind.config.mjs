@@ -7,6 +7,11 @@ export default {
         ibm: ['IBMPlexSans', 'ui-sans-serif'],
         anton: ['Anton'],
       },
+      colors: {
+        orange: {
+          400: '#FF5C00',
+        },
+      },
     },
   },
   plugins: [],
