@@ -1,9 +1,10 @@
 ---
-import { HelloWorld } from '@/components/HelloWorld';
+import { Typography } from '@/lib/ui';
 ---
 
 <div
-  class="flex min-h-screen w-screen items-center justify-center bg-[#121212] text-2xl text-neutral-50"
+  class="flex min-h-screen w-screen flex-col items-center justify-center bg-[#121212] font-ibm text-2xl text-neutral-50"
 >
-  <HelloWorld />
+  <Typography tag="h1" className="text-2xl"> Hello World. </Typography>
+  <Typography tag="h2" font="anton" className="font-anton"> anton test </Typography>
 </div>
