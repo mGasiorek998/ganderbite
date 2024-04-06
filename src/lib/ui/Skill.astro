@@ -1,0 +1,25 @@
+---
+import { Typography } from '@/lib/ui';
+
+type Props = {
+  title: string;
+  skills: string[];
+};
+
+const { title, skills } = Astro.props;
+---
+
+<li class="flex flex-col">
+  <Typography tag="h2" class="text-neutral-400">
+    {title.toUpperCase()}
+  </Typography>
+  <div class="flex flex-wrap gap-x-[1.5vw] gap-y-[1vw]">
+    {
+      skills.map((skill) => (
+        <Typography font="anton" size="xl" class="leading-none">
+          {skill.toUpperCase()}
+        </Typography>
+      ))
+    }
+  </div>
+</li>
