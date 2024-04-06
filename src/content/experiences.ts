@@ -23,7 +23,7 @@ export const experiences: Experience[] = [
     from: '10/19',
     to: '10/23',
     companyName: 'Bachelor Degree',
-    position: 'Collegium Da Vinci',
+    position: 'Computer Science',
     special: true,
   },
 ];

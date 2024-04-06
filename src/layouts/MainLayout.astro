@@ -1,37 +1,30 @@
 ---
-import { Icon, Typography } from '@/lib/ui';
+import { Footer, Typography } from '@/lib/ui';
+
+type Props = {
+  title: string;
+};
+
+const { title } = Astro.props;
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
   </head>
-  <body class="min-h-svh w-screen" style="height: calc(100% + 100vh)">
-    <main class="relative z-10 bg-neutral-900 px-1.5 text-neutral-50 md:px-3.5 lg:px-8">
+  <body class="relative min-h-svh w-svw" style="height: calc(100% + 100vh)">
+    <header class="relative z-10 bg-neutral-900 px-2.5 text-center md:px-3.5 lg:px-8">
+      <Typography tag="span" font="anton" size="2xl" class="select-none text-center text-neutral-50"
+        >GANDER<Typography tag="span" font="anton" size="2xl" class:list={['text-orange-400']}
+          >BITE</Typography
+        >
+      </Typography>
+    </header>
+    <main class="relative z-10 bg-neutral-900 px-2.5 text-neutral-50 md:px-3.5 lg:px-8">
       <slot />
     </main>
-    <footer class="relative flex h-screen w-screen bg-neutral-50">
-      <div class="fixed inset-0 flex size-full flex-col items-center justify-center gap-y-[.75vw]">
-        <Typography tag="span" font="anton" size="xl" className="select-none tracking-tight">
-          GANDER<Typography tag="span" font="anton" size="xl" className="text-orange-400"
-            >BITE</Typography
-          >
-        </Typography>
-        <Typography size="lg"
-          >Let's talk about <Typography tag="span" size="lg" className="text-orange-400"
-            >the future</Typography
-          ></Typography
-        >
-        <div class="flex gap-x-8">
-          <a href="https://github.com" aria-label="Go to my github page">
-            <Icon icon="github" size="lg" />
-          </a>
-          <a href="https://linkedin.com" aria-label="Go to my linkedin">
-            <Icon icon="linkedin" size="lg" />
-          </a>
-        </div>
-      </div>
-    </footer>
+    <Footer />
   </body>
 </html>

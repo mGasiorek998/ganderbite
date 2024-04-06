@@ -1,0 +1,18 @@
+---
+import { icons } from '@/lib/ui/icons';
+
+type Icon = keyof typeof icons;
+
+type Props = {
+  icon: Icon;
+};
+
+const IconComp = icons[Astro.props.icon];
+---
+
+<span
+  class="block size-[12vw] transition-colors hover:text-orange-400 md:size-[6vw] lg:size-[4vw]"
+  aria-hidden="true"
+>
+  <IconComp />
+</span>
