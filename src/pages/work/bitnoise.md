@@ -1,6 +1,6 @@
 ---
-layout: '../layouts/ExperienceLayout.astro'
-title: 'My Experience at Wunderman Thompson'
+layout: '../../layouts/ExperienceLayout.astro'
+title: 'My Experience at Bitnoise'
 description: 'Summary of my work at Bitnoise'
 ---
 
@@ -9,6 +9,10 @@ description: 'Summary of my work at Bitnoise'
 - one
 - two
 - three
+
+| name  | description |
+| ----- | ----------- |
+| hello | world       |
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar neque vel diam tempor, a lacinia ex condimentum. Fusce aliquet ligula ut sapien convallis, eget placerat lorem fermentum. Integer bibendum ante vel eros bibendum, non pellentesque nibh dignissim. In hac habitasse platea dictumst. Nullam sagittis, neque at finibus scelerisque, massa magna fermentum odio, eu faucibus leo ipsum ac purus. Quisque tincidunt est ac sapien dignissim, sed fermentum odio tempor. Suspendisse potenti. Vivamus venenatis nec metus eget tincidunt.
 

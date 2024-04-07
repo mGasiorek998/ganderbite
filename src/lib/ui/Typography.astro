@@ -13,8 +13,8 @@ type Props = WithClassName<{
 }>;
 
 const fontFamilies: Record<FontFamily, string> = {
-  anton: 'Anton',
-  sans: 'IBMPlexSans',
+  anton: 'font-anton',
+  sans: 'font-sans',
 };
 
 const sizeClasses: Record<FontSize, string> = {
@@ -29,13 +29,9 @@ const { class: className, tag = 'p', font = 'sans', size = 'md', ...restProps } 
 
 const TypographyComp = tag;
 const classes = sizeClasses[size];
-const fontfamily = fontFamilies[font];
+const fontClass = fontFamilies[font];
 ---
 
-<TypographyComp
-  class:list={cn(classes, className)}
-  style={{
-    fontFamily: fontfamily,
-  }}
-  {...restProps}><slot /></TypographyComp
+<TypographyComp class:list={cn(classes, fontClass, className)} {...restProps}
+  ><slot /></TypographyComp
 >
