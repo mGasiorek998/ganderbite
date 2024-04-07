@@ -2,12 +2,16 @@
 import { Typography, Skill, Experience } from '@/lib/ui';
 import MainLayout from '@/layouts/MainLayout.astro';
 import { skills, experiences } from '@/content';
-
-// TODO: add favicon
-// TODO: improve SEO
 ---
 
 <MainLayout title="GanderBite">
+  <div slot="header" class="text-center">
+    <Typography slot="header" tag="span" font="anton" size="2xl" class="select-none text-neutral-50"
+      >GANDER<Typography tag="span" font="anton" size="2xl" class:list={['text-orange-400']}
+        >BITE</Typography
+      >
+    </Typography>
+  </div>
   <section class="relative h-[calc(100svh_-_23.2vw)] w-full">
     <Typography tag="h1" class="absolute bottom-0 pt-3.5 md:pt-0">
       <Typography tag="span" class="text-orange-400">One-Man</Typography> Army web developer based in
@@ -24,18 +28,20 @@ import { skills, experiences } from '@/content';
   </section>
   <section class="grid grid-cols-1 gap-x-[5vw] py-20 md:grid-cols-2 md:py-44">
     <ul class="left-0 top-0 flex h-min w-8/12 flex-col gap-y-[5vw] md:sticky md:top-10 md:w-10/12">
-      {skills.map(({ title, skills }) => <Skill title={title} skills={skills} />)}
+      {
+        skills.map(({ title, skills }) => (
+          <li>
+            <Skill title={title} skills={skills} />
+          </li>
+        ))
+      }
     </ul>
     <ul class="no-scrollbar flex flex-col gap-y-[10vw] pb-0 pt-20 md:gap-y-[80vh] md:py-0">
       {
-        experiences.map(({ from, to, companyName, position, special = false }) => (
-          <Experience
-            from={from}
-            to={to}
-            companyName={companyName}
-            position={position}
-            special={special}
-          />
+        experiences.map((experience) => (
+          <li>
+            <Experience {...experience} />
+          </li>
         ))
       }
     </ul>

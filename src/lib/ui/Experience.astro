@@ -1,19 +1,27 @@
 ---
+import type { WithClassName } from '@/lib/types/generics';
 import { Typography } from '@/lib/ui';
-import { cn } from '@/lib/utils';
+import { cn, slugify } from '@/lib/utils';
+import { type Experience } from '@/content';
 
-type Props = {
-  from: string;
-  to?: string;
-  companyName: string;
-  position?: string;
-  special?: boolean;
-};
+type Props = WithClassName<Experience>;
 
-const { from, to = 'PRESENT', companyName, position = '', special = false } = Astro.props;
+const {
+  from,
+  to = 'PRESENT',
+  companyName,
+  position = '',
+  special = false,
+  slug,
+  class: className,
+} = Astro.props;
+const pathname = Astro.url.pathname;
+
+const slugifiedComapnyName = slugify(companyName);
+const slugifiedPosition = slugify(position);
 ---
 
-<li class="flex basis-full flex-col md:flex-1">
+<div class:list={cn('flex basis-full flex-col md:flex-1', className)}>
   <Typography font="anton" size="xl" class="select-none text-neutral-500">
     {from} - {to}
   </Typography>
@@ -24,15 +32,22 @@ const { from, to = 'PRESENT', companyName, position = '', special = false } = As
     class={cn('leading-none pb-2.5', {
       'text-orange-400': special,
     })}
+    transition:name={`experience-${slugifiedComapnyName}`}
+    transition:animate="initial"
   >
     {companyName}
   </Typography>
   {
     !!position && (
-      <Typography font="sans" class="pb-2.5 leading-none text-neutral-500">
+      <Typography
+        font="sans"
+        class="pb-2.5 leading-none text-neutral-500"
+        transition:name={`experience-${slugifiedPosition}`}
+        transition:animate="initial"
+      >
         {position}
       </Typography>
     )
   }
-  <hr class="bg-neutral-50" />
-</li>
+  {slug && slug !== pathname && <a href={slug}>Learn more</a>}
+</div>

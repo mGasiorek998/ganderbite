@@ -28,12 +28,13 @@ const sizeClasses: Record<FontSize, string> = {
 const TypographyComp = Astro.props.tag ?? 'p';
 const classes = sizeClasses[Astro.props.size ?? 'md'];
 const font = fontFamilies[Astro.props.font ?? 'sans'];
-const { class: className } = Astro.props;
+const { class: className, ...restProps } = Astro.props;
 ---
 
 <TypographyComp
   class:list={cn(classes, className)}
   style={{
     fontFamily: font,
-  }}><slot /></TypographyComp
+  }}
+  {...restProps}><slot /></TypographyComp
 >
