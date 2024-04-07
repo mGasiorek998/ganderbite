@@ -25,16 +25,17 @@ const sizeClasses: Record<FontSize, string> = {
   sm: 'text-[3vw] md:text-[1vw]',
 };
 
-const TypographyComp = Astro.props.tag ?? 'p';
-const classes = sizeClasses[Astro.props.size ?? 'md'];
-const font = fontFamilies[Astro.props.font ?? 'sans'];
-const { class: className, ...restProps } = Astro.props;
+const { class: className, tag = 'p', font = 'sans', size = 'md', ...restProps } = Astro.props;
+
+const TypographyComp = tag;
+const classes = sizeClasses[size];
+const fontfamily = fontFamilies[font];
 ---
 
 <TypographyComp
   class:list={cn(classes, className)}
   style={{
-    fontFamily: font,
+    fontFamily: fontfamily,
   }}
   {...restProps}><slot /></TypographyComp
 >
