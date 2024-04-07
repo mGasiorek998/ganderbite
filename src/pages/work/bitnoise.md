@@ -4,20 +4,18 @@ title: 'My Experience at Bitnoise'
 description: 'Summary of my work at Bitnoise'
 ---
 
-## Hello world
+During my tenure, I collaborated on projects for clients in Europe and the USA. These ranged from making eye-catching landing pages to building complex web and mobile apps.
 
-- one
-- two
-- three
+In each of the products, I was involved in every step of the process, from picking tools and estimating the work to showing the products to clients.
 
-| name  | description |
-| ----- | ----------- |
-| hello | world       |
+Some product requirements needed me to handle both the frontend and backend. This tested my backend skills, from basic tasks like data management to more advanced features like video and camera streaming.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar neque vel diam tempor, a lacinia ex condimentum. Fusce aliquet ligula ut sapien convallis, eget placerat lorem fermentum. Integer bibendum ante vel eros bibendum, non pellentesque nibh dignissim. In hac habitasse platea dictumst. Nullam sagittis, neque at finibus scelerisque, massa magna fermentum odio, eu faucibus leo ipsum ac purus. Quisque tincidunt est ac sapien dignissim, sed fermentum odio tempor. Suspendisse potenti. Vivamus venenatis nec metus eget tincidunt.
+I worked in medium to large teams of software developers, where we prioritized teamwork to efficiently deliver products. This collaborative approach ensured both that each project met its goals effectively and learn from each other.
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut vel magna a risus bibendum pulvinar. Nulla et lacinia mi. Nam venenatis tempus bibendum. Mauris vulputate tristique ligula, ut dapibus sapien luctus in. Donec vehicula, risus eget facilisis consectetur, velit felis volutpat nulla, nec lacinia lorem ipsum sit amet eros. Maecenas pharetra tortor quis arcu volutpat, eget varius elit tincidunt.
+Outside of project work, I've contributed to various articles, sharing my knowledge with fellow developers beyond the company.
 
-Integer suscipit scelerisque erat, ut blandit enim accumsan vitae. Donec luctus placerat ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas eget varius ligula. Cras ut risus in velit pharetra sodales. Morbi id lobortis enim. Suspendisse vitae nulla odio. Integer auctor enim in mauris aliquet, ac gravida lacus feugiat.
+### Here you can read some of my recent posts:
 
-Duis tristique, nulla sed consectetur cursus, erat velit rhoncus ex, ut varius enim tortor sed mi. Ut sollicitudin ipsum quis justo tincidunt, in tincidunt nisi sodales. Nulla facilisi. In tincidunt, mi et blandit lobortis, ipsum magna fermentum lectus, vitae tincidunt neque nulla sed est. Nulla facilisi. Maecenas varius ex quis suscipit tempor. Sed pretium semper turpis nec tristique. Sed sagittis, arcu vel luctus pellentesque, odio ipsum semper justo, non convallis sapien tortor quis justo. Sed malesuada lectus quis dui convallis luctus. Maecenas fringilla euismod nisi sit amet interdum.
+- [Ready, set, action! Diving deep into Next.JS Servers Actions](https://www.bitnoise.pl/blog/ready-set-action)
+- [The fight of two wolves within state](https://www.bitnoise.pl/blog/the-fight-of-two-wolves-within-state)
+- [Developer is sweaty, TypeScript spaghetti](https://www.bitnoise.pl/blog/Developer-is-sweaty-TypeScript-spaghetti)

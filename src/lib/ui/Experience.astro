@@ -12,6 +12,7 @@ const {
   companyName,
   position = '',
   special = false,
+  shortDescription = '',
   slug,
   class: className,
 } = Astro.props;
@@ -49,5 +50,28 @@ const slugifiedPosition = slugify(position);
       </Typography>
     )
   }
-  {slug && slug !== pathname && <a href={slug}>Learn more</a>}
+  {
+    !!shortDescription && (
+      <>
+        <hr class="my-2" />
+        <Typography size="sm" class="pt-3 md:w-11/12 lg:w-8/12">
+          {shortDescription}
+        </Typography>
+      </>
+    )
+  }
+  {
+    slug && slug !== pathname && (
+      <a
+        href={slug}
+        class="pt-2 underline"
+        title={`Read more about my work at ${companyName}`}
+        aria-label={`Read more about my work at ${companyName}`}
+      >
+        <Typography size="sm" tag="span">
+          Read more
+        </Typography>
+      </a>
+    )
+  }
 </div>

@@ -1,5 +1,4 @@
 ---
-import '@/styles/font-faces.css';
 import { type WithClassName } from '@/lib/types/generics';
 import { cn } from '@/lib/utils';
 
@@ -22,7 +21,7 @@ const sizeClasses: Record<FontSize, string> = {
   xl: 'text-[9vw] md:text-[5vw] lg:text-[4.5vw] leading-none',
   lg: 'text-[5vw] md:text-[2.5vw] lg:text-[2vw]',
   md: 'text-[4vw] md:text-[1.5vw]',
-  sm: 'text-[3vw] md:text-[1vw]',
+  sm: 'text-[3vw] md:text-[1.25vw] lg:text-[1vw]',
 };
 
 const { class: className, tag = 'p', font = 'sans', size = 'md', ...restProps } = Astro.props;

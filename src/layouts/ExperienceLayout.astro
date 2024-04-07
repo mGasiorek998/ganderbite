@@ -3,6 +3,7 @@ import { experiences } from '@/content';
 import MainLayout from '@/layouts/MainLayout.astro';
 import { Typography } from '@/lib/ui';
 import { slugify } from '@/lib/utils';
+import '@/styles/markdown.css';
 
 const { frontmatter } = Astro.props;
 
@@ -37,7 +38,11 @@ const slugifiedPosition = slugify(experience.position ?? '');
     </Typography>
     <hr />
   </div>
-  <section class="container mx-auto min-h-svh w-full max-w-screen-lg py-16 md:w-10/12 lg:w-8/12">
+  <section
+    class="container mx-auto min-h-svh w-full max-w-screen-lg py-16 text-[4vw] leading-relaxed md:text-[2.5vw] lg:text-[1.5vw] xl:text-[1vw]"
+  >
     <slot />
   </section>
 </MainLayout>
+
+<style></style>
