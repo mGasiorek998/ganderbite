@@ -7,6 +7,10 @@ export default {
         ibm: ['IBMPlexSans', 'ui-sans-serif'],
         anton: ['Anton'],
       },
+      backgroundImage: {
+        'noise-dark': "url('/noise-dark.svg')",
+        'noise-light': "url('/noise-light.svg')",
+      },
       colors: {
         orange: {
           400: '#FF5C00',
