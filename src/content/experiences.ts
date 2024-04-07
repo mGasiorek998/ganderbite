@@ -5,6 +5,7 @@ export type Experience = {
   position: string | undefined;
   special?: true;
   slug?: string;
+  shortDescription?: string;
 };
 
 export const experiences: Experience[] = [
@@ -14,6 +15,8 @@ export const experiences: Experience[] = [
     companyName: 'Bitnoise',
     position: 'Javascript Developer',
     slug: '/work/bitnoise',
+    shortDescription:
+      'During my tenure, I collaborated on projects for clients in Europe and the USA. These ranged from making eye-catching landing pages to building complex web and mobile apps.',
   },
   {
     from: '06/21',
@@ -21,6 +24,8 @@ export const experiences: Experience[] = [
     companyName: 'Wunderman Thompson',
     position: 'UI Engineer',
     slug: '/work/wunderman-thompson',
+    shortDescription:
+      'Building complex and responsive UI for major companies located in UK with use of Adobe Experience Manager',
   },
   {
     from: '10/19',

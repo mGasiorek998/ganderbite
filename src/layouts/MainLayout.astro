@@ -1,6 +1,7 @@
 ---
 import Footer from '@/layouts/Footer.astro';
 import AppHead from '@/layouts/AppHead.astro';
+import '@/styles/font-faces.css';
 
 type Props = {
   title: string;
@@ -11,11 +12,16 @@ const { title } = Astro.props;
 
 <html lang="en">
   <AppHead title={title} />
-  <body class="relative min-h-svh w-svw bg-neutral-900" style="height: calc(100% + 100vh)">
-    <header slot="header" class="relative z-10 bg-noise-dark px-2.5 md:px-3.5 lg:px-8">
+  <body class="relative min-h-svh w-svw" style="height: calc(100% + 100vh)">
+    <header
+      slot="header"
+      class="relative z-10 bg-neutral-900 bg-noise-dark px-2.5 md:px-3.5 lg:px-8"
+    >
       <slot name="header" />
     </header>
-    <main class="relative z-10 bg-noise-dark px-2.5 text-neutral-50 md:px-3.5 lg:px-8">
+    <main
+      class="relative z-10 bg-neutral-900 bg-noise-dark px-2.5 text-neutral-50 md:px-3.5 lg:px-8"
+    >
       <slot />
     </main>
     <Footer />
