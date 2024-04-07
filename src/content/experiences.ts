@@ -1,9 +1,10 @@
-type Experience = {
+export type Experience = {
   from: string;
   to: string | undefined;
   companyName: string;
   position: string | undefined;
   special?: true;
+  slug?: string;
 };
 
 export const experiences: Experience[] = [
@@ -12,12 +13,14 @@ export const experiences: Experience[] = [
     to: undefined,
     companyName: 'Bitnoise',
     position: 'Javascript Developer',
+    slug: '/bitnoise',
   },
   {
     from: '06/21',
     to: '08/22',
     companyName: 'Wunderman Thompson',
     position: 'UI Engineer',
+    slug: '/wunderman-thompson',
   },
   {
     from: '10/19',

@@ -1,5 +1,6 @@
 ---
-import { Footer, Typography } from '@/lib/ui';
+import { ViewTransitions } from 'astro:transitions';
+import { Footer } from '@/lib/ui';
 
 type Props = {
   title: string;
@@ -13,14 +14,11 @@ const { title } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
-  <body class="relative min-h-svh w-svw" style="height: calc(100% + 100vh)">
-    <header class="relative z-10 bg-neutral-900 px-2.5 text-center md:px-3.5 lg:px-8">
-      <Typography tag="span" font="anton" size="2xl" class="select-none text-center text-neutral-50"
-        >GANDER<Typography tag="span" font="anton" size="2xl" class:list={['text-orange-400']}
-          >BITE</Typography
-        >
-      </Typography>
+  <body class="relative min-h-svh w-svw bg-neutral-900" style="height: calc(100% + 100vh)">
+    <header slot="header" class="relative z-10 bg-neutral-900 px-2.5 md:px-3.5 lg:px-8">
+      <slot name="header" />
     </header>
     <main class="relative z-10 bg-neutral-900 px-2.5 text-neutral-50 md:px-3.5 lg:px-8">
       <slot />

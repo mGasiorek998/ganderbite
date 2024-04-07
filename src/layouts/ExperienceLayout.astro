@@ -1,0 +1,43 @@
+---
+import { experiences } from '@/content';
+import MainLayout from '@/layouts/MainLayout.astro';
+import { Typography } from '@/lib/ui';
+import { slugify } from '@/lib/utils';
+
+const { frontmatter } = Astro.props;
+
+const experience = experiences.find((exp) => frontmatter.url.includes(exp.slug));
+
+if (!experience) {
+  throw Error('Missing experience!');
+}
+
+const slugifiedCompanyName = slugify(experience.companyName);
+const slugifiedPosition = slugify(experience.position ?? '');
+---
+
+<MainLayout title={frontmatter.title}>
+  <div slot="header" class="flex flex-col gap-y-1 text-neutral-50">
+    <Typography
+      class="pt-8"
+      font="anton"
+      size="xl"
+      tag="h1"
+      transition:name={`experience-${slugifiedCompanyName}`}
+    >
+      {experience.companyName}
+    </Typography>
+    <Typography
+      size="lg"
+      tag="h2"
+      class="pb-4 text-neutral-50/50"
+      transition:name={`experience-${slugifiedPosition}`}
+    >
+      {experience.position}
+    </Typography>
+    <hr />
+  </div>
+  <section class="container mx-auto min-h-svh w-full max-w-screen-lg py-16 md:w-10/12 lg:w-8/12">
+    <slot />
+  </section>
+</MainLayout>
