@@ -13,14 +13,14 @@ export const experiences: Experience[] = [
     to: undefined,
     companyName: 'Bitnoise',
     position: 'Javascript Developer',
-    slug: '/bitnoise',
+    slug: '/work/bitnoise',
   },
   {
     from: '06/21',
     to: '08/22',
     companyName: 'Wunderman Thompson',
     position: 'UI Engineer',
-    slug: '/wunderman-thompson',
+    slug: '/work/wunderman-thompson',
   },
   {
     from: '10/19',
