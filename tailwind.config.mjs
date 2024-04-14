@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        ibm: ['IBMPlexSans', ...defaultTheme.fontFamily.sans],
+        sans: ['IBMPlexSans', ...defaultTheme.fontFamily.sans],
         anton: ['Anton', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
