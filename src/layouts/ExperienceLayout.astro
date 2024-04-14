@@ -17,7 +17,7 @@ const slugifiedCompanyName = slugify(experience.companyName);
 const slugifiedPosition = slugify(experience.position ?? '');
 ---
 
-<MainLayout title={frontmatter.title}>
+<MainLayout title={frontmatter.title} description={frontmatter.description}>
   <div slot="header" class="flex flex-col gap-y-1 text-neutral-50">
     <Typography
       class="pt-8"

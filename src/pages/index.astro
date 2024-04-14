@@ -2,14 +2,9 @@
 import { Typography, Skill, Experience } from '@/lib/ui';
 import MainLayout from '@/layouts/MainLayout.astro';
 import { skills, experiences } from '@/content';
-
-// TODO: move bitniose.md and wt.md to blog/
-// TODO: Add SEO
-// TODO: Add better links for experiences
-// TODO: Write some content for experiences
 ---
 
-<MainLayout title="GanderBite">
+<MainLayout title="GanderBite" description="Michał Gąsiorek GanderBite personal website">
   <div slot="header" class="max-w-[100svw] overflow-hidden text-center">
     <Typography slot="header" tag="span" font="anton" size="2xl" class="select-none text-neutral-50"
       >GANDER<Typography tag="span" font="anton" size="2xl" class:list={['text-orange-400']}

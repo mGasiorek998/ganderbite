@@ -5,13 +5,14 @@ import '@/styles/font-faces.css';
 
 type Props = {
   title: string;
+  description: string;
 };
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <html lang="en">
-  <AppHead title={title} />
+  <AppHead title={title} description={description} />
   <body class="relative min-h-svh w-svw" style="height: calc(100% + 100vh)">
     <header
       slot="header"
